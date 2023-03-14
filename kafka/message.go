@@ -105,7 +105,7 @@ func (h *handle) getRktFromMessage(msg *Message) (crkt *C.rd_kafka_topic_t) {
 func setupHeadersFromGlueMsg(msg *Message, gMsg *C.glue_msg_t) {
 	msg.Headers = make([]Header, gMsg.tmphdrsCnt)
 	for n := range msg.Headers {
-		tmphdr := (*[1 << 30]C.tmphdr_t)(unsafe.Pointer(gMsg.tmphdrs))[n]
+		tmphdr := (*[1 << 29]C.tmphdr_t)(unsafe.Pointer(gMsg.tmphdrs))[n]
 		msg.Headers[n].Key = C.GoString(tmphdr.key)
 		if tmphdr.val != nil {
 			msg.Headers[n].Value = C.GoBytes(unsafe.Pointer(tmphdr.val), C.int(tmphdr.size))
