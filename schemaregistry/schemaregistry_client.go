@@ -23,7 +23,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/confluentinc/confluent-kafka-go/v2/schemaregistry/cache"
+	"github.com/styfstr/confluent-kafka-go/v2/schemaregistry/cache"
 )
 
 /* Schema Registry API endpoints

@@ -32,7 +32,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/confluentinc/confluent-kafka-go/v2/kafka"
+	"github.com/styfstr/confluent-kafka-go/v2/kafka"
 )
 
 var run = true

@@ -22,7 +22,7 @@ import (
 	"encoding/binary"
 	"fmt"
 
-	"github.com/confluentinc/confluent-kafka-go/v2/schemaregistry"
+	"github.com/styfstr/confluent-kafka-go/v2/schemaregistry"
 )
 
 // Type represents the type of Serde
